@@ -37,7 +37,7 @@ public class OrderRemoteServiceImpl extends GeneralServiceImpl<Order> implements
    * @return Order
    * @throws ServiceException
    */
-  private Order buildOrderObject(Map<String, Object> attributes) throws ServiceException {
+  public Order buildOrderObject(Map<String, Object> attributes) throws ServiceException {
     Order order = new Order();
 
     for (Map.Entry<String, Object> att : attributes.entrySet())

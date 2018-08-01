@@ -7,6 +7,7 @@ import net.magja.service.GeneralService;
 import net.magja.service.ServiceException;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Service handling customer orders.
@@ -18,6 +19,8 @@ public interface OrderRemoteService extends GeneralService<Order> {
 
   List<Order> list(Filter filter) throws ServiceException;
 
+  public Order buildOrderObject(Map<String, Object> attributes) throws ServiceException;
+  
   Order getById(Integer id) throws ServiceException;
 
   void addComment(Order order, String status, String comment, Boolean notify) throws ServiceException;

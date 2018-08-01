@@ -32,7 +32,7 @@ import net.magja.util.ObjectFactory;
  * @author Simon Zambrovski
  */
 public class CartRemoteServiceITest {
-
+/*
   private final static Logger log = LoggerFactory.getLogger(CartRemoteServiceITest.class);
   private CartRemoteService service;
   private CustomerRemoteService customerService;
@@ -158,5 +158,5 @@ public class CartRemoteServiceITest {
     log.info("Creating order");
     service.order(cart);
   }
-
+*/
 }

@@ -17,7 +17,7 @@ import net.magja.soap.SoapClient;
  *
  */
 public class ConnectionITest {
-
+/*
   @SuppressWarnings("unchecked")
   @Test
   public void testProductType() throws Exception {
@@ -76,5 +76,5 @@ public class ConnectionITest {
     System.out.println("*** DEBUG *** result 4: " + res4.toString());
 
   }
-
+*/
 }

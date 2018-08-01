@@ -736,16 +736,18 @@ public class ProductRemoteServiceImpl extends GeneralServiceImpl<Product> implem
   }
 
   @Override
-  public void setAssociatedProducts(String productSku, Map<String, String> childProducts) throws ServiceException {
-
+  public String setAssociatedProducts(String productSku, Map<String, String> childProducts) throws ServiceException {
+	  String results = "erro desconhecido";
     try {
-      String results = soapClient.callArgs(ResourcePath.ProductAssociateChildren, new Object[] { productSku, childProducts });
+      results = soapClient.callArgs(ResourcePath.ProductAssociateChildren, new Object[] { productSku, childProducts });
       log.debug("setAssociated products {} returned {}", productSku, results);
     } catch (AxisFault e) {
       if (debug)
         e.printStackTrace();
       throw new ServiceException(e.getMessage());
     }
+    
+    return results;
 
   }
 

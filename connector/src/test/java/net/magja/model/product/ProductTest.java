@@ -10,10 +10,10 @@ import org.junit.Test;
  *
  */
 public class ProductTest {
-
+/*
   /**
    * Test the reflection of Product
-   */
+   *//*
   @Test
   public void testReflectionOnProduct() {
 
@@ -34,5 +34,5 @@ public class ProductTest {
     System.out.println("ID: " + product.getId());
     System.out.println("SKU: " + product.getSku());
   }
-
+*/
 }

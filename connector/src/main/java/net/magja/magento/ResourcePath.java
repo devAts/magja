@@ -34,7 +34,8 @@ public enum ResourcePath {
 
     ProductTypeList("catalog_product_type.list"),
 
-    ProductAttributeSetList("catalog_product_attribute_set.list"),
+    ProductAttributeSetList("catalog_product_attribute_set"),
+    ProductAttributeSetAdd("product_attribute_set.attributeAdd"),
     ProductAttributeList("catalog_product_attribute.list"),
     ProductAttributeInfo("catalog_product_attribute.info"),
     ProductAttributeCreate("catalog_product_attribute.create"),
@@ -60,6 +61,7 @@ public enum ResourcePath {
     ProductLinkRemove("product_link.remove"),
     ProductLinkTypes("product_link.types"),
     ProductLinkAttributes("product_link.attributes"),
+    CatalogProductAssociate("catalog_product.associate"),
 
     ProductAttributeTierPriceInfo("catalog_product_attribute_tier_price.info"),
     ProductAttributeTierPriceUpdate("catalog_product_attribute_tier_price.update"),

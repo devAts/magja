@@ -11,7 +11,7 @@ import net.magja.soap.SoapClient;
  *
  */
 public class ConnectionMock extends Connection {
-
+/*
 	public ConnectionMock() {
 		super();
 	}
@@ -19,5 +19,5 @@ public class ConnectionMock extends Connection {
 	public SoapClient getClient() {
 		return client;
 	}
-
+*/
 }
