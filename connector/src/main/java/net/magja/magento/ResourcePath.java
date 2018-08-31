@@ -34,7 +34,7 @@ public enum ResourcePath {
 
     ProductTypeList("catalog_product_type.list"),
 
-    ProductAttributeSetList("catalog_product_attribute_set"),
+    ProductAttributeSetList("catalog_product_attribute_set.list"),
     ProductAttributeSetAdd("product_attribute_set.attributeAdd"),
     ProductAttributeList("catalog_product_attribute.list"),
     ProductAttributeInfo("catalog_product_attribute.info"),

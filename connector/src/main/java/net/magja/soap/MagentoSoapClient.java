@@ -120,7 +120,7 @@ public class MagentoSoapClient implements SoapClient {
       login();
     } catch (AxisFault e) {
       // do not swallow, rethrow as runtime
-      throw new RuntimeException("Cannot connect to Magento", e);
+      //throw new RuntimeException("Cannot connect to Magento", e);
     }
   }
 
