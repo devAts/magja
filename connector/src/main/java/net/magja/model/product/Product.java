@@ -20,6 +20,9 @@ public class Product extends BaseMagentoModel<Object[]> {
   private ProductType type = ProductType.SIMPLE;
   private String name;
   private Double price;
+  private Double specialPrice;
+  private String specialFromDate;
+  private String specialToDate;
   private Double cost;
   private Double msrp;
   private String shortDescription;
@@ -98,6 +101,9 @@ public class Product extends BaseMagentoModel<Object[]> {
     mapping.setProperty("cost", "cost");
     mapping.setProperty("status", "enabled");
     mapping.setProperty("price", "price");
+    mapping.setProperty("special_price", "specialPrice");
+    mapping.setProperty("special_from_date ", "specialFromDate ");
+    mapping.setProperty("special_to_date", "specialToDate");
     // mapping.setProperty("tier_price", "tierPrices");
     mapping.setProperty("msrp", "msrp");
     mapping.setProperty("short_description", "shortDescription");
@@ -212,6 +218,27 @@ public class Product extends BaseMagentoModel<Object[]> {
   }
 
   /**
+   * @return the special price
+   */
+  public Double getSpecialPrice() {
+	return specialPrice;
+  }
+
+  /**
+   * @return the special from price
+   */
+  public String getSpecialFromDate() {
+	return specialFromDate;
+  }
+
+  /**
+   * @return the special to price
+   */
+  public String getSpecialToDate() {
+	return specialToDate;
+  }
+
+  /**
    * @param msrp
    *          the msrp (Manufacturer's Suggested Retail Price) to set
    */
@@ -232,6 +259,27 @@ public class Product extends BaseMagentoModel<Object[]> {
    */
   public void setPrice(Double price) {
     this.price = price;
+  }
+
+  /**
+   * @param specialPrice to set
+   */
+  public void setSpecialPrice(Double specialPrice) {
+	this.specialPrice = specialPrice;
+  }
+  
+  /**
+   * @param special_from_date to set
+   */
+  public void setSpecialFromDate(String specialFromDate) {
+	this.specialFromDate = specialFromDate;
+  }
+
+  /**
+   * @param special_to_date to set
+   */
+  public void setSpecialToDate(String specialToDate) {
+	this.specialToDate = specialToDate;
   }
 
   /**
@@ -740,6 +788,9 @@ public class Product extends BaseMagentoModel<Object[]> {
     result = prime * result + ((msrp == null) ? 0 : msrp.hashCode());
     result = prime * result + ((name == null) ? 0 : name.hashCode());
     result = prime * result + ((price == null) ? 0 : price.hashCode());
+    result = prime * result + ((specialPrice == null) ? 0 : specialPrice.hashCode());
+    result = prime * result + ((specialFromDate == null) ? 0 : specialFromDate.hashCode());
+    result = prime * result + ((specialToDate == null) ? 0 : specialToDate.hashCode());
     result = prime * result + ((qty == null) ? 0 : qty.hashCode());
     result = prime * result + ((shipping_policy == null) ? 0 : shipping_policy.hashCode());
     result = prime * result + ((shop_id == null) ? 0 : shop_id.hashCode());
@@ -920,6 +971,27 @@ public class Product extends BaseMagentoModel<Object[]> {
       }
     } else if (!price.equals(other.price)) {
       return false;
+    }
+    if (specialPrice == null) {
+    	if (other.specialPrice != null) {
+    		return false;
+    	}
+    } else if (!specialPrice.equals(other.specialPrice)) {
+    	return false;
+    }
+    if (specialFromDate == null) {
+    	if (other.specialFromDate != null) {
+    		return false;
+    	}
+    } else if (!specialFromDate.equals(other.specialFromDate)) {
+    	return false;
+    }
+    if (specialToDate == null) {
+    	if (other.specialToDate != null) {
+    		return false;
+    	}
+    } else if (!specialToDate.equals(other.specialToDate)) {
+    	return false;
     }
     if (qty == null) {
       if (other.qty != null) {

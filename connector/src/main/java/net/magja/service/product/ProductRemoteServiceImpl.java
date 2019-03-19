@@ -1093,8 +1093,12 @@ public class ProductRemoteServiceImpl extends GeneralServiceImpl<Product> implem
         productData.put("visibility", product.getVisibility().getValue());
       }
 
-      Object[] newProductArgs = new Object[] { product.getId(), productData, !storeView.isEmpty() ? storeView : null };
+      if (product.getEnabled() != null) {
+    	  productData.put("status", BooleanUtils.toBoolean(product.getEnabled()) ? "1" : "2");
+      }
 
+      Object[] newProductArgs = new Object[] { product.getId(), productData, !storeView.isEmpty() ? storeView : null };
+      
       log.info("Updating '{}' with data {}", product.getSku(), productData);
 
       Object callResult = soapClient.callArgs(ResourcePath.ProductUpdate, newProductArgs);
